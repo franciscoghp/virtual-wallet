@@ -54,13 +54,13 @@ El frontend es la interfaz gráfica que interactúa con los microservicios para 
 
 [**Frontend**](./virtual-wallet-frontend\README.md)
 
-### Microservicio de Autenticación
+### Microservicio de Cliente
 
 Este microservicio es responsable de comunicarse y servir como puente entre el usuario y la base de datos.
 
 [**Microservicio del Cliente**](./client-service\README.md)
 
-### Microservicio de Gestión Financiera
+### Microservicio de Base de Datos
 
 Este microservicio gestiona las operaciones financieras, como recargas, pagos, y consultas de saldo. Consulta su README para más información sobre su instalación y uso:
 
