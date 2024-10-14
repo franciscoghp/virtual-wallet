@@ -33,13 +33,19 @@ Este microservicio es responsable de comunicarse y servir como puente entre el u
 
 Sigue estos pasos para ejecutar el microservicio de cliente en tu entorno local:
 
-1. Instala las dependencias:
+1. Asegurate de accedor a la carpeta del client-service:
+
+    ```bash
+    cd client-service
+    ```
+
+2. Instala las dependencias:
 
     ```bash
     npm install
     ```
 
-2. Ejecuta el servidor:
+3. Ejecuta el servidor:
 
     ```bash
     npm run dev
@@ -75,7 +81,7 @@ El microservicio de cliente proporciona las siguientes rutas:
     }
     ```
 
-- **POST /wallet/recharge**: Crea un nuevo cliente.
+- **POST /wallet/recharge**: Recarga una billetera.
   - Cuerpo de la solicitud:
     ```json
     {
@@ -90,7 +96,7 @@ El microservicio de cliente proporciona las siguientes rutas:
       "message": 'Wallet recharged successfully' 
     };
     ```
-- **POST /wallet/payment**: Crea un nuevo cliente.
+- **POST /wallet/payment**: Realiza un pago.
   - Cuerpo de la solicitud:
     ```json
     {
@@ -107,7 +113,7 @@ El microservicio de cliente proporciona las siguientes rutas:
     }
     ```
 
-- **POST /wallet/payment/confirm**: Crea un nuevo cliente.
+- **POST /wallet/payment/confirm**: Confirma un pago.
   - Cuerpo de la solicitud:
     ```json
     {
@@ -120,7 +126,7 @@ El microservicio de cliente proporciona las siguientes rutas:
     { "message":"Compra confirmada y saldo descontado" }
     ```
 
-- **GET /wallet/balance/25359383/04141452293**: Crea un nuevo cliente.
+- **GET /wallet/balance/25359383/04141452293**: Consulta el saldo de una billetera.
   - Respuesta:
     ```json
      { "balance": 9000 }

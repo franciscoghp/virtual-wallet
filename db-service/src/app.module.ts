@@ -12,10 +12,10 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     MailModule,
     ConfigModule.forRoot({
-      isGlobal: true, // Asegúrate de que las variables estén disponibles en toda la aplicación
-      envFilePath: '.env', // Asegúrate de que apunta al archivo correcto
+      isGlobal: true,
+      envFilePath: '.env',
     }),
-    MongooseModule.forRoot('mongodb+srv://francisco9mil:EKsmxqWK65HD7Vts@cluster-virtual-wallet.zil3i.mongodb.net/'),
+    MongooseModule.forRoot(process.env.MONGO_URL),
     MongooseModule.forFeature([
       { name: Wallet.name, schema: WalletSchema },
       { name: Client.name, schema: ClientSchema },

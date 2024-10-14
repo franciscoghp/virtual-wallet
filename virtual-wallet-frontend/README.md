@@ -39,19 +39,25 @@ Este es el frontend de la **Billetera Virtual**, encargado de la interfaz gráfi
 
 Sigue estos pasos para ejecutar el frontend en tu entorno local:
 
-3. Instala las dependencias necesarias:
+1. Asegurate de accedor a la carpeta del virtual-wallet-frontend:
+
+    ```bash
+    cd virtual-wallet-frontend
+    ```
+
+2. Instala las dependencias necesarias:
 
     ```bash
     npm install
     ```
 
-5. Inicia el servidor de desarrollo:
+3. Inicia el servidor de desarrollo:
 
     ```bash
     npm start
     ```
 
-6. Abre tu navegador en [http://localhost:3000](http://localhost:3000) para ver la aplicación en funcionamiento.
+4. Abre tu navegador en [http://localhost:3000](http://localhost:3000) para ver la aplicación en funcionamiento.
 
 ## Uso
 
