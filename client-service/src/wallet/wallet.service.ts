@@ -22,7 +22,7 @@ export class WalletClientService {
   async recharge(depositData: { document: string; phone: string; amount: number }) {
     try {
       await this.client.send({ cmd: 'recharge' }, depositData).toPromise();
-      return { success: true, message: 'Client registration emitted successfully' };
+      return { success: true, message: 'Wallet recharged emitted successfully' };
     } catch (error) {
       this.logger.error(`Error in recharge wallet: ${error.message}`);
       throw new InternalServerErrorException(error.message || 'Error al recargar la billetera');

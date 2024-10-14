@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Frontend - Billetera Virtual
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-17.0.2-blue.svg)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-2.2.19-blue.svg)
+![React Router DOM](https://img.shields.io/badge/React%20Router%20DOM-6.0-blue.svg)
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Este es el frontend de la **Billetera Virtual**, encargado de la interfaz gráfica y la interacción con los microservicios de Cliente y Base de Datos. La aplicación está construida en **React** con **Tailwind CSS** para el estilo, y **React Router DOM** para la navegación.
 
-### `npm start`
+## Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Interfaz Moderna**: Usamos Tailwind CSS para construir una interfaz atractiva y responsiva.
+- **Navegación Fluida**: Implementación de navegación entre vistas con **React Router DOM**.
+- **Funciones Principales**:
+  - Registrar clientes.
+  - Recargar billetera.
+  - Realizar pagos.
+  - Consultar el saldo disponible.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tabla de Contenidos
 
-### `npm test`
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologías Utilizadas
 
-### `npm run build`
+- **React**: Biblioteca JavaScript para construir interfaces de usuario.
+- **React Router DOM**: Para manejar la navegación dentro de la aplicación.
+- **Tailwind CSS**: Framework de CSS para estilos rápidos y personalizables.
+- **Vite**: Herramienta para el desarrollo y construcción del proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Sigue estos pasos para ejecutar el frontend en tu entorno local:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instala las dependencias necesarias:
 
-### `npm run eject`
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Inicia el servidor de desarrollo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Abre tu navegador en [http://localhost:3000](http://localhost:3000) para ver la aplicación en funcionamiento.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Uso
 
-## Learn More
+### Navegación Principal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Inicio**: Página de bienvenida con enlaces a las funciones principales de la billetera.
+- **Registrar Cliente**: Formulario para agregar un nuevo cliente al sistema.
+- **Recargar Billetera**: Permite recargar saldo a una cuenta de usuario.
+- **Hacer Pago**: Realiza pagos de un cliente a otro.
+- **Consultar Saldo**: Consulta el saldo disponible en la cuenta del cliente.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Footer
+
+El footer muestra el mensaje:
+
+> **Developed with Love ❤️ By Francisco Herrera**
+
+## Estructura del Proyecto
+
+```bash
+frontend/
+├── public/
+│   ├── analisis.png               # Imagen usada para la tarjeta de Registrar Cliente
+│   ├── billetera.png              # Imagen usada para la tarjeta de Recargar Billetera
+│   ├── compensacion-de-trabajadores.png  # Imagen usada para la tarjeta de Hacer Pago
+│   ├── prestamo.png               # Imagen usada para la tarjeta de Consultar Saldo
+│   └── favicon.ico                # Ícono de la página
+├── src/
+│   ├── components/
+│   │   ├── ClientRegister.jsx      # Componente para registrar un cliente
+│   │   ├── WalletRecharge.jsx      # Componente para recargar la billetera
+│   │   ├── MakePayment.jsx         # Componente para hacer pagos
+│   │   ├── CheckBalance.jsx        # Componente para consultar el saldo
+│   ├── App.jsx                    # Componente principal de la aplicación
+│   └── index.js                   # Punto de entrada del frontend
+├── tailwind.config.js             # Configuración de Tailwind CSS
+├── postcss.config.js              # Configuración de PostCSS
+├── package.json                   # Dependencias del proyecto
+└── README.md                      # Este archivo

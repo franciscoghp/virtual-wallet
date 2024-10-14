@@ -56,24 +56,6 @@ export class WalletDbService {
     }
   }
 
-  // async pay(paymentData: { document: string; phone: string; amount: number }) {
-  //   try {
-  //     const client = await this.walletModel.findOne({ document: paymentData.document, phone: paymentData.phone });
-  //     if (!client) {
-  //       throw new NotFoundException('Client not found');
-  //     }
-
-  //     if (client.balance < paymentData.amount) {
-  //       throw new BadRequestException('Insufficient funds');
-  //     }
-
-  //     client.balance -= paymentData.amount;
-  //     return await client.save();
-  //   } catch (error) {
-  //     throw new InternalServerErrorException('Error processing payment', error.message);
-  //   }
-  // }
-
   // Crear una nueva sesión de pago
   async payment(paymentData: { document: string; phone: string; amount: number }) {
     try {
